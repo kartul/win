@@ -8,27 +8,9 @@ NB! Ma ei vastuta siin millegi eest, kasuta omal vastutusel.
 
 Olekufaili tekitamine.
 
-1) Tekita Salt-i juurkataloogi (/srv/salt) fail, nt nimega win-pakid.sls
+1) Kopeeri win-pakid.sls oma Salti juurkataloogi (/srv/salt)
 
-2) Peisti tekitatud faili järgmised read:
+2) Kopeeri top.sls oma Salt-i juurkataloogi, või lisa selles sisalduvad read oma originaalsele top.sls failile. Jälgi, et iga järgmine aste selles failis oleks eelmisest kahe tühiku võrra edasi!
 
-win-pakid-installitud:
-  pkg.installed:
-    - pkgs:
-      - jre
-      - libreoffice
-      - firefox
-      - 7zip
-      - flash
-      - vlc
-      - audacity
-
-3) Kirjuta top.sls faili sisse järgmised read (lisaks eelnevatele kui need on):
-
-base:
-  'os:Windows':
-    - match: grain
-    - win-pakid
-
-4) Nüüd saad kasutada olekute sünkimist, nt salt '*' state.highstate
+3) Nüüd saad kasutada olekute sünkimist, nt salt '*' state.highstate
 
