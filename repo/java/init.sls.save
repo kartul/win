@@ -1,8 +1,0 @@
-java:
-  7.0.550:
-    installer: 'salt://win/repo/java/jre-7u55-windows-i586.exe'
-    full_name: 'Java 7 Update 55'
-    reboot: False
-    install_flags: ' /s'
-    uninstaller: 'installer: 'salt://win/repo/LibreOffice/LibreOffice_4.2.1_Win_x86.msi''
-    uninstall_flags: ''

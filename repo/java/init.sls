@@ -1,6 +1,6 @@
 jre:
   7.0.550:
-    installer: 'salt://win/repo/java/jre-7u55-windows-i586.exe'
+    installer: 'http://salt.tln.edu.ee/java/jre-7u55-windows-i586.exe'
     full_name: 'Java 7 Update 55'
     reboot: False
     install_flags: ' /s'
